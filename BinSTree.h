@@ -146,9 +146,6 @@ ListOfNode MakeListLevel (BinTree P, int N);
 /*        elemen pohon P yang levelnya = N, jika semua alokasi berhasil */
 /*       		menghasilkan list kosong jika ada alokasi yang gagal */
 
-/***** Membentuk Balanced Tree *****/
-BinTree BuildBalanceTree (int N);
-/* Menghasilkan sebuah balance Tree dengan N Node, nilai setiap node dibaca */
 
 /***** Operasi untuk Binary Search Tree *****/
 boolean BSearch (BinTree P, infotype X);
