@@ -266,7 +266,20 @@ void DelDaun (BinTree *T, infotype X) {
     }
 }
 
-void InsertLast(ElmtList **L, infotype X);
+void InsertLast(ElmtList **L, infotype X) {
+    address1 P = AlokasiList(X);  
+    if (P != NULL) {
+        if (*L == NULL) {
+            *L = P;  
+        } else {
+            address1 Last = *L;
+            while (Last->next != NULL) {  
+                Last = Last->next;
+            }
+            Last->next = P; 
+        }
+    }
+}
 
 ListOfNode MakeListDaun (BinTree P) {
     ListOfNode L = Nil;
@@ -389,7 +402,7 @@ void DelNode (BinTree *P) {
 
 void DeAlokasi (address P) {
     if (P != Nil) {
-        free(P->info);  // Deallocasi memori untuk info jika menggunakan string
-        free(P);         // Deallocasi memori untuk node
+        free(P->info); 
+        free(P);
     }
 }

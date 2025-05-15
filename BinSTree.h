@@ -170,5 +170,6 @@ void DeAlokasi (address P);
 /* Melakukan dealokasi / pengembalian address P ke system */
 
 void PrintNodeLevel(BinTree P, int level);
+void InsertLast(ElmtList **L, infotype X);
 
 #endif
