@@ -6,6 +6,3 @@
 #define false 0
 
 #endif
-
-// ganti Idx, Idx adalah indeks
-// benerin dan rapihkan tampilan 
