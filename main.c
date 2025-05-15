@@ -96,3 +96,71 @@ int main() {
                     printf("\n");
                 }
                 break;
+
+            case 7:
+                // Search Node Tree
+                printf("Masukkan Node yang dicari: ");
+                char strSearch[100];
+                fgets(strSearch, sizeof(strSearch), stdin);
+                strSearch[strcspn(strSearch, "\n")] = '\0'; // Hapus newline
+
+                if (Search(morseTree, strSearch)) {
+                    printf("Node %s ditemukan dalam tree\n", strSearch);
+                } else {
+                    printf("Node %s tidak ditemukan dalam tree\n", strSearch);
+                }
+                break;
+                
+            case 8:
+                // Jumlah Daun/Leaf
+                printf("\n== Jumlah Daun ==\n");
+                printf("Jumlah daun pada tree: %d\n", nbDaun(morseTree));
+                break;
+                
+            case 9:
+                // Mencari Kedalaman Node Tree
+                printf("\n== Kedalaman Tree ==\n");
+                printf("Kedalaman tree: %d\n", Depth(morseTree));
+                break;
+                
+            case 10:
+                // Membandingkan 2 Node Tree
+                printf("\n== Membandingkan 2 Node ==\n");
+
+                char str1[MAX_STRING], str2[MAX_STRING];
+
+                printf("Masukkan node pertama: ");
+                scanf(" %s", str1);
+                getchar();
+
+                printf("Masukkan node kedua: ");
+                scanf(" %s", str2);
+                getchar();
+
+                int lvl1 = Level(morseTree, str1);
+                int lvl2 = Level(morseTree, str2);
+
+                if (lvl1 == 0) {
+                    printf("Node %s tidak ditemukan dalam tree\n", str1);
+                } else if (lvl2 == 0) {
+                    printf("Node %s tidak ditemukan dalam tree\n", str2);
+                } else {
+                    if (lvl1 < lvl2) {
+                        printf("Node %s lebih dekat ke root daripada node %s\n", str1, str2);
+                    } else if (lvl1 > lvl2) {
+                        printf("Node %s lebih dekat ke root daripada node %s\n", str2, str1);
+                    } else {
+                        printf("Kedua node sama jauhnya dari root\n");
+                    }
+                }
+                break;
+        
+            case 11:
+                // Exit logic
+                printf("Terima kasih telah menggunakan program Binary Tree!\n");
+                break;
+         }
+    }   
+    return 0;
+}
+
