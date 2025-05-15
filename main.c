@@ -24,8 +24,8 @@ int main() {
         getchar(); // Ambil  newline
         
         switch (choice) {
-            case 1:
-                
+            case 1: 
+
             case 2:
                 // Print Tree
                 printf("\n== Print Tree ==\n");
@@ -96,3 +96,8 @@ int main() {
                     printf("\n");
                 }
                 break;
+
+            }
+
+        }
+
