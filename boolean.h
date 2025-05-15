@@ -7,5 +7,4 @@
 
 #endif
 
-// ganti Idx, Idx adalah indeks
-// benerin dan rapihkan tampilan 
+
