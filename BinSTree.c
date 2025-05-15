@@ -216,7 +216,7 @@ int Depth(BinTree P) {
     }
 }
 
-int Max(int a, int b) {
+ int Max(int a, int b) {
     return (a > b) ? a : b;
 }
   
@@ -242,7 +242,7 @@ void AddDaun (BinTree *P, infotype X, infotype Y, boolean Kiri) {
     }
 }
 
-void DelDaunTerkiri (BinTree *T, infotype *X) {
+void DelDaunTerkiri (BinTree *P, infotype *X) {
     if (Left(*P) == Nil && Right(*P) == Nil) {
         *X = Info(*P);
         DeAlokasi(*P);
@@ -254,7 +254,7 @@ void DelDaunTerkiri (BinTree *T, infotype *X) {
     }
 }
 
-void DelDaun (BinTree *T, infotype X) {
+void DelDaun (BinTree *P, infotype X) {
     if (!IsEmpty(*P)) {
         if (Left(*P) == Nil && Right(*P) == Nil && Info(*P) == X) {
             DeAlokasi(*P);
@@ -386,8 +386,8 @@ void DestroyTree(BinTree *P) {
         DestroyTree(&Left(*P));
         DestroyTree(&Right(*P));
         DeAlokasi(*P);
-        *P = Nil;
-    }
+        *P = Nil;
+ }
 }
 
 void DelNode (BinTree *P) {
