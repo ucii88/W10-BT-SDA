@@ -146,7 +146,6 @@ ListOfNode MakeListLevel (BinTree P, int N);
 /*        elemen pohon P yang levelnya = N, jika semua alokasi berhasil */
 /*       		menghasilkan list kosong jika ada alokasi yang gagal */
 
-
 /***** Operasi untuk Binary Search Tree *****/
 boolean BSearch (BinTree P, infotype X);
 /* Mengirimkan True jika ada node dari P yang bernilai X */
@@ -171,5 +170,7 @@ void DeAlokasi (address P);
 /* IS : P terdefinisi */
 /* FS : P dikembalikan ke sistem */
 /* Melakukan dealokasi / pengembalian address P ke system */
+
+void PrintNodeLevel(BinTree P, int level);
 
 #endif
